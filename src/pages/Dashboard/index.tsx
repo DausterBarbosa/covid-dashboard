@@ -18,8 +18,8 @@ interface State{
 function Dashboard(){
     const [states, setStates] = useState();
 
-    function handleState(state:unknown){
-        fetch("https://api.brasil.io/v1/dataset/covid19/caso/data/?format=json&is_last=True&page=1&place_type=state&state=CE", {
+    function handleState(state:State){
+        fetch(`https://api.brasil.io/v1/dataset/covid19/caso/data/?format=json&is_last=True&page=1&place_type=state&state=${state.value}`, {
             headers: {
                 Authorization: "Token 1447bb1589b58c17c739d7b844cb01c3b28148cd"
             }
@@ -46,7 +46,7 @@ function Dashboard(){
                 placeholder="Selecione um estado"
                 options={states}
                 noOptionsMessage={() => "Estado não encontrado"}
-                onChange={(value, action) => handleState(value)}
+                onChange={(state) => handleState(state as State)}
             />
             <InfoContainer>
                 <InfoContainerHeader>
