@@ -7,6 +7,7 @@ export const DashboardContainer = styled.div`
     flex-direction: column;
     align-items: center;
     padding: 10px;
+    max-width: 500px;
 
     img {
         width: 100%;
@@ -27,23 +28,10 @@ export const SelectComponent = styled(Select)`
 export const InfoContainer = styled.div`
     margin-top: 30px;
     width: 100%;
-`;
-
-export const InfoContainerHeader = styled.div`
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #EEE;
-    color: #6e6e6e;
 
     img {
-        width: 70px;
-    }
-
-    strong {
-        font-size: 20px;
-        margin-left: 10px;
+        width: 150px;
+        margin-bottom: 20px;
     }
 `;
 

@@ -9,5 +9,7 @@ export default createGlobalStyle`
 
     body {
         font-family: Arial, Helvetica, 'Sans-Serif';
+        display: flex;
+        justify-content: center;
     }
 `;
